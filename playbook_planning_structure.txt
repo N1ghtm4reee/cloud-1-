@@ -1,0 +1,22 @@
+Cloud-1 playbook planning structure
+
+1. Managed-server requirements [DONE]
+   Implemented in playbooks/requirements.yml and imported by site.yml.
+
+   - Validate that the managed server runs Ubuntu with Python 3.
+   - Remove packages that conflict with Docker Engine.
+   - Install the Docker repository prerequisites.
+   - Create the APT keyring directory.
+   - Install Docker's official signing key.
+   - Configure Docker's official APT repository.
+   - Install Docker Engine, Docker CLI, containerd, Buildx, and Compose.
+   - Enable and start the Docker service.
+   - Verify that the Docker daemon responds.
+   - Display the installed Docker and Docker Compose versions.
+
+2. Requirements verification [DONE]
+
+   - First ansible-playbook site.yml run installed Docker successfully.
+   - Installed Docker version: 29.6.1.
+   - Installed Docker Compose version: v5.3.0.
+   - Second ansible-playbook site.yml run completed with changed=0 and failed=0.

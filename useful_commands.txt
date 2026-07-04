@@ -1,6 +1,7 @@
-Verify inventory: ansible-inventory -i inventory.ini --list
+Verify inventory: ansible-inventory -i PATH_TO_INVENTORY --list
 
 Ping a group in inventory: ansible [group_name] -m ping -i inventory.ini
 
 check playbook syntax: ansible-playbook -i {playbook.yml ... } --syntax-check
 
+if you have config file use this instead to ping: ansible all -m ping

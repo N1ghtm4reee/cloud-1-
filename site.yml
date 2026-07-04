@@ -1,1 +1,4 @@
 # The master playbook orchestrating the entire infrastructure
+
+- name: Setup and install dependencies in remote servers
+  import_playbook: playbooks/requirements.yml
